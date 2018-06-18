@@ -1,0 +1,13 @@
+<% include partials/header %>
+<h1><%=podcast.name%></h1>
+
+<img src="<%= podcast.image %>">
+
+<p><%= podcast.description %></p>
+
+<% podcast.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %>
+    </p>
+<% }) %>
+<% include partials/footer %>
